@@ -1,1 +1,22 @@
-<p>home works!</p>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="row avatar" >
+            <img src="https://avatars0.githubusercontent.com/u/39437054?v=4" alt=" ">
+        </div>
+        <div class="row personalInfo" >
+            <div class="col-sm-12">
+                <h1>{{currentUser.name}}</h1>
+                <p>| {{currentUser.bio}} |</p>
+                <p>{{currentUser.location}}</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <ul *ngFor="let repo of repos">
+            <li>{{repo.description}}</li>
+        </ul>
+    </div>    
+</div>

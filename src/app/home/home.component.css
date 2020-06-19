@@ -1,0 +1,16 @@
+.avatar{
+    width: 50%;
+    margin: 0 auto;
+}
+
+img{
+    width: 20%;
+    height: 20vh;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.personalInfo{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
