@@ -1,0 +1,9 @@
+img{
+    height: 20vh;
+}
+a{
+    color: blue;
+}
+a:hover{
+    cursor: pointer;
+}

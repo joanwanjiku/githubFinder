@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-sm-12">
+        <form #searchForm='ngForm' (ngSubmit) = "submitUserName()">
+            <div class="input-group m-2">
+                <input type="text" class="form-control" placeholder="github's username" [(ngModel)]= 'userName.name' #name= "ngModel" name="name">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-info" type="submit" >Search</button>
+                </div>
+            </div>
+        </form>        
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-sm-2">
+        <img src="{{retrievedUser.avatar_url}}" alt="" class="img-thumbnail">
+    </div>
+    <div class="col-sm-4">
+        <h1>{{retrievedUser.name}}</h1>
+        <p>{{retrievedUser.bio}} | {{retrievedUser.location}}</p>
+        <p><a>Repos..<span class="badge badge-pill badge-primary">{{retrievedUser.public_repos}}</span>
+        </a></p>
+
+    </div>
+</div>
