@@ -14,4 +14,5 @@ export class UserService {
   getCurrentUser(): Observable<User>{
     return this.http.get<User>(environment.userUrl);
   }
+ 
 }
