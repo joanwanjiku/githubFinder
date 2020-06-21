@@ -6,6 +6,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Description</th>
                 <th scope="col">Created On</th>
+                <th scope="col">Owner</th>
               </tr>
             </thead>
             <tbody>              
@@ -13,6 +14,7 @@
                 <td>{{repo.name | titlecase}}</td>
                 <td style="width: 50%">{{repo.description}}</td>                
                 <td>{{repo.created_at | date}}</td>
+                <td>{{repo.owner.login}}</td>
               </tr>
             </tbody>
           </table>        
