@@ -19,10 +19,10 @@ export class RepositoryComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(history.state.name)
+    // console.log(history.state.name)
     this.http.get<Repository[]>(`https://api.github.com/users/${history.state.name}/repos`).subscribe({
-       next(response) {console.log(response)}
-      // next: repo => this.repos = repo
+      //  next(response) {console.log(response)}
+      next: repo => this.repos = repo
      })
   }
 
