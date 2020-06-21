@@ -3,7 +3,7 @@ import {User} from '../models/user'
 import {UserService} from '../services/user.service'
 import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -13,6 +13,7 @@ import {Router} from '@angular/router'
 export class UserComponent implements OnInit {
   userName: User
   retrievedUser: User
+  word: string= "Repos..."
   constructor(private http: HttpClient, private router: Router) {
     this.userName = new User("", "",0, "", "", new Date)
    }
@@ -24,8 +25,8 @@ export class UserComponent implements OnInit {
       next: user => this.retrievedUser = user
      })
    }
-   goToRepos(){
-     this.router.navigate(['/repository'])
+   goToRepos(){     
+     this.router.navigate(['/repository'], {state: {name: this.userName['name']}})
    }
 
 
