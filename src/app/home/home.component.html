@@ -15,8 +15,21 @@
 </div>
 <div class="row">
     <div class="col-sm-12">
-        <ul *ngFor="let repo of repos">
-            <li>{{repo.description}}</li>
-        </ul>
+        <table class="table table-bordered table-sm table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Created On</th>
+              </tr>
+            </thead>
+            <tbody>              
+              <tr *ngFor="let repo of repos">
+                <td>{{repo.name | titlecase}}</td>
+                <td style="width: 50%">{{repo.description}}</td>                
+                <td>{{repo.created_at | date}}</td>
+              </tr>
+            </tbody>
+          </table>        
     </div>    
 </div>
