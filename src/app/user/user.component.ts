@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '../models/user'
 import {UserService} from '../services/user.service'
 import {environment} from '../../environments/environment';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-user',
@@ -12,7 +13,7 @@ import {HttpClient} from '@angular/common/http'
 export class UserComponent implements OnInit {
   userName: User
   retrievedUser: User
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.userName = new User("", "",0, "", "", new Date)
    }
 
@@ -22,6 +23,9 @@ export class UserComponent implements OnInit {
       //  next(response) {console.log(response)}
       next: user => this.retrievedUser = user
      })
+   }
+   goToRepos(){
+     this.router.navigate(['/repository'])
    }
 
 
