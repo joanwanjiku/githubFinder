@@ -2,6 +2,6 @@ export class Repository {
     constructor(
         public name: string,
         public description: string,
-        public createdDate: Date    
+        public created_at: Date    
     ){}
 }
