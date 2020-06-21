@@ -9,10 +9,11 @@ import {environment} from '../../environments/environment'
 })
 export class UserService {
   currentUser: User
+  private userUrl = 'https://api.github.com/users/joanwanjiku'
   constructor(private http: HttpClient) { }
 
   getCurrentUser(): Observable<User>{
-    return this.http.get<User>(environment.userUrl);
+    return this.http.get<User>(this.userUrl);
   }
  
 }

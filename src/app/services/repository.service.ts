@@ -9,9 +9,10 @@ import {environment} from '../../environments/environment'
 })
 export class RepositoryService {
   repos: Repository[]
+  private repoUrl = 'https://api.github.com/users/joanwanjiku/repos'
   constructor(private http: HttpClient) { }
 
   getUserRepos(): Observable<Repository[]>{
-    return this.http.get<Repository[]>(environment.reposUrl);
+    return this.http.get<Repository[]>(this.repoUrl);
   }
 }
