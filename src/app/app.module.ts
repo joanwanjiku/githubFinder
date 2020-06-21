@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
+import { RepositoryComponent } from './repository/repository.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    UserComponent
+    UserComponent,
+    RepositoryComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
