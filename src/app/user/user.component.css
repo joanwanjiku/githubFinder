@@ -2,8 +2,10 @@ img{
     height: 20vh;
 }
 a{
-    color: blue;
+    color: rgba(0, 0, 255, 0.599);
+    font-weight: bold;
 }
 a:hover{
     cursor: pointer;
+    color: blue;
 }

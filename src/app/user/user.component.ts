@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
 export class UserComponent implements OnInit {
   userName: User
   retrievedUser: User
-  word: string= "Repos..."
+  word: string= "Click to show Repos... "
   constructor(private http: HttpClient, private router: Router) {
     this.userName = new User("", "",0, "", "", new Date)
    }
